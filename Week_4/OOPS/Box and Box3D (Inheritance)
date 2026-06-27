@@ -1,0 +1,53 @@
+class Box {
+
+    double length;
+    double breadth;
+
+    // Constructor
+    Box(double length, double breadth) {
+
+        this.length = length;
+        this.breadth = breadth;
+    }
+
+    // Area method
+    double area() {
+
+        return length * breadth;
+    }
+}
+
+class Box3D extends Box {
+
+    double height;
+
+    // Constructor
+    Box3D(double length, double breadth, double height) {
+
+        super(length, breadth);
+
+        this.height = height;
+    }
+
+    // Volume method
+    double volume() {
+
+        return length * breadth * height;
+    }
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Box3D box = new Box3D(10, 5, 4);
+
+        System.out.println("Length = " + box.length);
+        System.out.println("Breadth = " + box.breadth);
+        System.out.println("Height = " + box.height);
+
+        System.out.println("Area = " + box.area());
+
+        System.out.println("Volume = " + box.volume());
+    }
+}
